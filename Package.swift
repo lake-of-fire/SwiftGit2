@@ -16,7 +16,8 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         .package(
             name: "Clibgit2",
-            url: "https://github.com/thebaselab/Clibgit2",
+            //url: "https://github.com/thebaselab/Clibgit2",
+            url: "https://github.com/allotropeinc/Clibgit2",
             .branch("master")
         ),
         .package(
