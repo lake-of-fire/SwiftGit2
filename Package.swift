@@ -41,14 +41,6 @@ let package = Package(
         .target(
             name: "SwiftGit2",
             dependencies: ["Clibgit2", "ZipArchive"]
-        ),
-        .testTarget(
-            name: "SwiftGit2Tests",
-            dependencies: ["SwiftGit2", "Quick", "Nimble"],
-            path: "SwiftGit2Tests",
-            resources: [
-                .copy("Fixtures/")
-            ]
         )
     ]
 )
