@@ -17,7 +17,7 @@ let package = Package(
         .package(
             name: "Clibgit2",
             //url: "https://github.com/thebaselab/Clibgit2",
-            url: "https://github.com/allotropeinc/Clibgit2",
+            url: "https://github.com/allotropeinc/Clibgit2.git",
             .branch("main")
         ),
         .package(
