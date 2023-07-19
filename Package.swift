@@ -20,11 +20,6 @@ let package = Package(
             branch: ("main")
         ),
         .package(
-            name: "ZipArchive",
-            url: "https://github.com/ZipArchive/ZipArchive.git",
-            .upToNextMajor(from: "2.4.3")
-        ),
-        .package(
             name: "Quick",
             url: "https://github.com/Quick/Quick.git",
             .upToNextMajor(from: "4.0.0")
