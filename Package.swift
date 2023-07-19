@@ -15,10 +15,9 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(
-            name: "Clibgit2",
             //url: "https://github.com/thebaselab/Clibgit2",
             url: "https://github.com/allotropeinc/Clibgit2.git",
-            .branch("main")
+            branch: ("main")
         ),
         .package(
             name: "ZipArchive",
@@ -41,8 +40,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SwiftGit2",
-            dependencies: ["Clibgit2", "ZipArchive"],
-            path: "SwiftGit2"
+            dependencies: ["Clibgit2", "ZipArchive"]
         ),
         .testTarget(
             name: "SwiftGit2Tests",
