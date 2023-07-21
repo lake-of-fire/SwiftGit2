@@ -15,11 +15,6 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(
-            //url: "https://github.com/thebaselab/Clibgit2",
-            url: "https://github.com/allotropeinc/Clibgit2.git",
-            branch: ("main")
-        ),
-        .package(
             name: "Quick",
             url: "https://github.com/Quick/Quick.git",
             .upToNextMajor(from: "4.0.0")
@@ -31,8 +26,14 @@ let package = Package(
         )
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
+        .binaryTarget(
+            name: "Clibgit2",
+            //url: "https://github.com/thebaselab/Clibgit2",
+//            url: "https://github.com/allotropeinc/Clibgit2.git",
+//            url: "https://github.com/lake-of-fire/Clibgit2.git",
+            url: "https://github.com/lake-of-fire/LibGit2-On-iOS/releases/download/1/Clibgit2.xcframework.zip",
+            checksum: "942ec7a7b0dad04777b04738a060ebd518e0eec9fa2d04c2838352d5298127b3"
+        ),
         .target(
             name: "SwiftGit2",
             dependencies: ["Clibgit2"]
