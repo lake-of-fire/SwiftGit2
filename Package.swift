@@ -23,9 +23,20 @@ let package = Package(
             name: "Nimble",
             url: "https://github.com/Quick/Nimble.git",
             .upToNextMajor(from: "9.2.1")
-        )
+        ),
+//        .package(url: "https://github.com/mfcollins3/libssh2-apple.git", branch: "main"),
+        .package(
+              url: "https://github.com/mfcollins3/libssh2-apple.git",
+              .upToNextMajor(from: "0.1.0")
+          ),
     ],
     targets: [
+        .binaryTarget(
+            name: "libgit2",
+            url: "https://github.com/mfcollins3/libgit2-apple/releases/download/0.1.0/libgit2.zip",
+            checksum: "488ea08d20ea4a651f56d271e8f793e92f07dd03e77447ab8dfd8846680a9cae"
+        ),
+        /*
         .binaryTarget(
             name: "Clibgit2",
             //url: "https://github.com/thebaselab/Clibgit2",
@@ -34,14 +45,27 @@ let package = Package(
             url: "https://github.com/lake-of-fire/LibGit2-On-iOS/releases/download/4/Clibgit2.xcframework.zip",
             checksum: "d337a75cd9c9ffb4605d20876ec0397e761c782740d3e4d3a9b0f47642adaeed"
         ),
+         */
 //        .target(
 //            name: "Clibgit2",
 //            dependencies: ["Clibgit2Binary"],
 //            publicHeadersPath: "libgit2"
 //        ),
-        .target(
+            .target(
+                name: "CGit",
+                publicHeadersPath: "./",
+                linkerSettings: [
+                    .linkedLibrary("iconv"),
+                    .linkedLibrary("z")
+                ]
+            ),
+            .target(
             name: "SwiftGit2",
-            dependencies: ["Clibgit2"]
+            dependencies: [
+                "libgit2",
+                "CGit",
+                .product(name: "SSH2", package: "libssh2-apple"),
+            ]
         )
     ]
 )

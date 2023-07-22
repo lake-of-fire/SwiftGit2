@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 GitHub, Inc. All rights reserved.
 //
 
-import Clibgit2
+import CGit
 
 /// The flags defining how a checkout should be performed.
 /// More detail is available in the libgit2 documentation for `git_checkout_strategy_t`.

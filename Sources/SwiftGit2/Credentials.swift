@@ -6,7 +6,7 @@
 //  Copyright © 2016 GitHub, Inc. All rights reserved.
 //
 
-import Clibgit2
+import CGit
 
 private class Wrapper<T> {
 	let value: T

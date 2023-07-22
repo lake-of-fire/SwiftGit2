@@ -2,7 +2,7 @@
 //  Copyright © 2020 GitHub, Inc. All rights reserved.
 //
 
-import Clibgit2
+import CGit
 import Foundation
 
 public struct MergeAnalysisResult: OptionSet {

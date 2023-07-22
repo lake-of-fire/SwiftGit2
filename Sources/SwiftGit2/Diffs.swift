@@ -6,7 +6,7 @@
 //  Copyright © 2017 GitHub, Inc. All rights reserved.
 //
 
-import Clibgit2
+import CGit
 
 public struct StatusEntry {
 	public var status: Diff.Status

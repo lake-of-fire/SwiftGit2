@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 GitHub, Inc. All rights reserved.
 //
 
-import Clibgit2
+import CGit
 
 /// A pointer to a git object.
 public protocol PointerType: Hashable {
