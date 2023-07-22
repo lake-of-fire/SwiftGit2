@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import CGit
+import Clibgit2
 
 /// A git object.
 public protocol ObjectType {
