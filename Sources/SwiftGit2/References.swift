@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 GitHub, Inc. All rights reserved.
 //
 
-import CGit
+import libgit2
 
 /// A reference to a git object.
 public protocol ReferenceType {

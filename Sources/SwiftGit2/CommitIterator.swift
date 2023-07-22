@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import CGit
+import libgit2
 
 public class CommitIterator: IteratorProtocol, Sequence {
 	public typealias Iterator = CommitIterator
