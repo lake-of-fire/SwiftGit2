@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 GitHub, Inc. All rights reserved.
 //
 
-import libgit2
+import CGit
 
 /// An identifier for a Git object.
 public struct OID {
