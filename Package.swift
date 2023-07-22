@@ -29,7 +29,8 @@ let package = Package(
 //              url: "https://github.com/mfcollins3/libssh2-apple.git",
 //              .upToNextMajor(from: "0.1.0")
 //          ),
-        .package(url: "https://github.com/lake-of-fire/libgit2.git", branch: "main"),
+//        .package(url: "https://github.com/lake-of-fire/libgit2.git", branch: "main"),
+        .package(url: "https://github.com/lake-of-fire/libgit2-apple.git", branch: "main"),
     ],
     targets: [
 //        .binaryTarget(
@@ -72,9 +73,10 @@ let package = Package(
 //                "libgit2",
 //                "Clibgit2",
 //                "CGit",
-                "libgit2",
+//                "libgit2",
 //                .product(name: "SSH2", package: "libssh2-apple"),
 //                .product(name: "Clibgit2", package: "Clibgit2"),
+                .product(name: "CGit", package: "libgit2-apple"),
             ]
         )
     ]
