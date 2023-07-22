@@ -31,8 +31,8 @@ let package = Package(
             //url: "https://github.com/thebaselab/Clibgit2",
 //            url: "https://github.com/allotropeinc/Clibgit2.git",
 //            url: "https://github.com/lake-of-fire/Clibgit2.git",
-            url: "https://github.com/lake-of-fire/LibGit2-On-iOS/releases/download/1/Clibgit2.xcframework.zip",
-            checksum: "942ec7a7b0dad04777b04738a060ebd518e0eec9fa2d04c2838352d5298127b3"
+            url: "https://github.com/lake-of-fire/LibGit2-On-iOS/releases/download/2/Clibgit2.xcframework.zip",
+            checksum: "1a9b19aae8bd7d7d77f6cf2edb89b53e8b6e1fdfa46c51d997f6c7e40ca40c13"
         ),
         .target(
             name: "SwiftGit2",
