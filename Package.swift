@@ -31,8 +31,8 @@ let package = Package(
             //url: "https://github.com/thebaselab/Clibgit2",
 //            url: "https://github.com/allotropeinc/Clibgit2.git",
 //            url: "https://github.com/lake-of-fire/Clibgit2.git",
-            url: "https://github.com/lake-of-fire/LibGit2-On-Apple/releases/download/1/Clibgit2.xcframework.zip",
-            checksum: "7752554ec4e33febc1465e1b88fe8fdc00d14927fcafbbfb50f2c8abadbf52d8"
+            url: "https://github.com/lake-of-fire/LibGit2-On-iOS/releases/download/4/Clibgit2.xcframework.zip",
+            checksum: "d337a75cd9c9ffb4605d20876ec0397e761c782740d3e4d3a9b0f47642adaeed"
         ),
 //        .target(
 //            name: "Clibgit2",
