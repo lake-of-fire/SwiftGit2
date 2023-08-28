@@ -321,7 +321,7 @@ public final class Repository {
     /// credentials - Credentials to use when fetching
     ///
     /// Returns nothing on success
-    public func pull(branch: Branch, from remote: Remote, credentials: Credentials, signature: Signature) throws {
+    public func pull(branch: Branch, from remote: Remote, credentials: Credentials, signature: Signature?) throws {
 		let result = fetch(remote, credentials: credentials)
 		switch result {
 		case .success:
@@ -431,7 +431,7 @@ public final class Repository {
         return referenceWithLibGit2Reference(newReferencePointer!)
     }
     
-    private func mergeBranchIntoCurrentBranch(branch: Branch, signature: Signature) throws {
+    private func mergeBranchIntoCurrentBranch(branch: Branch, signature: Signature?) throws {
         let localBranch = try self.currentBranch()
         
         if localBranch.commit.oid.description == branch.commit.oid.description {
@@ -443,7 +443,7 @@ public final class Repository {
         if (analysis.contains(.upToDate)){
             // Do nothing
             return
-        }else if (analysis.contains(.fastForward) || analysis.contains(.unborn)){
+        } else if (analysis.contains(.fastForward) || analysis.contains(.unborn)) {
             // Fast-forward branch
             let newReference = try updateReferenceTarget(
                 reference: localBranch,
@@ -452,7 +452,7 @@ public final class Repository {
             )
             
             try self.checkout(newReference, strategy: .Force).get()
-        }else if analysis.contains(.normal) {
+        } else if analysis.contains(.normal) {
             // Do normal merge
             let localTree = try safeTreeForCommitId(localBranch.commit.oid).get()
             let remoteTree = try safeTreeForCommitId(branch.commit.oid).get()
@@ -498,25 +498,26 @@ public final class Repository {
             
             let newTree = try writeUnsafeTree(tree: index)
             
-            // Create merge commit
-            let parents = [
-                try commit(localBranch.commit.oid).get(),
-                try commit(branch.commit.oid).get()
-            ]
-            
-            // FIXME: This is stepping on the local tree
-            _ = try self.commit(
-                tree: newTree.oid,
-                parents: parents,
-                message: "Merge branch \(localBranch.name)",
-                signature: signature
-            ).get()
-            
-            let updatedBranch = try self.currentBranch()
-            
-            try self.checkout(updatedBranch, strategy: .Force).get()
-            
-        }else {
+            if let signature = signature {
+                // Create merge commit
+                let parents = [
+                    try commit(localBranch.commit.oid).get(),
+                    try commit(branch.commit.oid).get()
+                ]
+                
+                // FIXME: This is stepping on the local tree
+                _ = try self.commit(
+                    tree: newTree.oid,
+                    parents: parents,
+                    message: "Merge branch \(localBranch.name)",
+                    signature: signature
+                ).get()
+                
+                let updatedBranch = try self.currentBranch()
+                
+                try self.checkout(updatedBranch, strategy: .Force).get()
+            }
+        } else {
             throw NSError(
                 domain: libGit2ErrorDomain,
                 code: 1,
