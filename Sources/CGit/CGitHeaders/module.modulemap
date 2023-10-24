@@ -1,4 +1,0 @@
-module CGit {
-    header "CGit.h"
-    export *
-}
