@@ -77,7 +77,7 @@ let package = Package(
             linkerSettings: [
                 .linkedLibrary("iconv"),
                 .linkedLibrary("z"),
-                .linkedLibrary("Clibgit2"),
+                //.linkedLibrary("git2"),
             ]
         )
     ]
