@@ -14,16 +14,8 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(
-            name: "Quick",
-            url: "https://github.com/Quick/Quick.git",
-            .upToNextMajor(from: "4.0.0")
-        ),
-        .package(
-            name: "Nimble",
-            url: "https://github.com/Quick/Nimble.git",
-            .upToNextMajor(from: "9.2.1")
-        ),
+        .package(url: "https://github.com/Quick/Quick.git", .upToNextMajor(from: "4.0.0")),
+        .package(url: "https://github.com/Quick/Nimble.git", .upToNextMajor(from: "9.2.1")),
 ////        .package(url: "https://github.com/mfcollins3/libssh2-apple.git", branch: "main"),
 //        .package(
 //              url: "https://github.com/mfcollins3/libssh2-apple.git",
@@ -33,6 +25,7 @@ let package = Package(
 //        .package(url: "https://github.com/lake-of-fire/libgit2-apple.git", branch: "main"),
 //        .package(url: "https://github.com/lake-of-fire/static-libgit2.git", branch: "main"),
         .package(url: "https://github.com/lake-of-fire/LibGit2-On-iOS-thebaselab.git", branch: "master"),
+        .package(url: "https://github.com/gematik/OpenSSL-Swift.git", branch: "main"),
     ],
     targets: [
 //        .binaryTarget(
@@ -79,6 +72,7 @@ let package = Package(
 //                .product(name: "SSH2", package: "libssh2-apple"),
                 .product(name: "Clibgit2", package: "LibGit2-On-iOS-thebaselab"),
 //                .product(name: "CGit", package: "libgit2-apple"),
+                .product(name: "OpenSSL-Swift", package: "OpenSSL-Swift"),
             ]
         )
     ]
