@@ -31,7 +31,8 @@ let package = Package(
 //          ),
 //        .package(url: "https://github.com/lake-of-fire/libgit2.git", branch: "main"),
 //        .package(url: "https://github.com/lake-of-fire/libgit2-apple.git", branch: "main"),
-        .package(url: "https://github.com/lake-of-fire/static-libgit2.git", branch: "main"),
+//        .package(url: "https://github.com/lake-of-fire/static-libgit2.git", branch: "main"),
+        .package(url: "https://github.com/thebaselab/LibGit2-On-iOS.git", branch: "master"),
     ],
     targets: [
 //        .binaryTarget(
@@ -76,9 +77,8 @@ let package = Package(
 //                "CGit",
 //                "libgit2",
 //                .product(name: "SSH2", package: "libssh2-apple"),
-//                .product(name: "Clibgit2", package: "Clibgit2"),
+                .product(name: "Clibgit2", package: "LibGit2-On-iOS"),
 //                .product(name: "CGit", package: "libgit2-apple"),
-                .product(name: "static-libgit2", package: "static-libgit2"),
             ]
         )
     ]

@@ -43,3 +43,5 @@ fastlane/screenshots/screenshots.html
 # scan temporary files
 fastlane/test_output
 test_output
+
+.DS_Store
