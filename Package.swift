@@ -73,6 +73,10 @@ let package = Package(
                 .product(name: "Clibgit2", package: "LibGit2-On-iOS-thebaselab"),
 //                .product(name: "CGit", package: "libgit2-apple"),
                 .product(name: "OpenSSL", package: "OpenSSL"),
+            ],
+            linkerSettings: [
+                .linkedLibrary("iconv"),
+                .linkedLibrary("z")
             ]
         )
     ]
