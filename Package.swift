@@ -26,6 +26,7 @@ let package = Package(
 //        .package(url: "https://github.com/lake-of-fire/static-libgit2.git", branch: "main"),
 //        .package(url: "https://github.com/lake-of-fire/LibGit2-On-iOS-thebaselab.git", branch: "master"),
         .package(url: "https://github.com/krzyzanowskim/OpenSSL.git", branch: "main"),
+        .package(url: "https://github.com/DimaRU/Libssh2Prebuild.git", branch: "master"),
 //        .package(url: "https://github.com/mfcollins3/libssh2-apple.git", .upToNextMajor(from: "0.1.0")),
     ],
     targets: [
@@ -75,6 +76,7 @@ let package = Package(
                 .product(name: "Clibgit2", package: "libgit2-apple"),
                 .product(name: "libgit2", package: "libgit2-apple"),
                 .product(name: "OpenSSL", package: "OpenSSL"),
+                .product(name: "CSSH", package: "Libssh2Prebuild"),
 //                .product(name: "SSH2", package: "libssh2-apple"),
 //                .product(name: "static-libgit2", package: "static-libgit2"),
             ]//,
