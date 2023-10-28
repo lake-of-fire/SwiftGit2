@@ -6,11 +6,8 @@
 //  Copyright (c) 2015 GitHub, Inc. All rights reserved.
 //
 
-#if os(macOS)
-import Clibgit2macos
-#else
+
 import Clibgit2
-#endif
 
 extension git_strarray {
 	func filter(_ isIncluded: (String) -> Bool) -> [String] {

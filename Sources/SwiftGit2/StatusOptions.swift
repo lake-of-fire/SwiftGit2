@@ -2,11 +2,8 @@
 //  Copyright © 2020 GitHub, Inc. All rights reserved.
 //
 
-#if os(macOS)
-import Clibgit2macos
-#else
+
 import Clibgit2
-#endif
 import Foundation
 
 public struct StatusOptions: OptionSet {

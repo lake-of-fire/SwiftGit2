@@ -1,9 +1,6 @@
 import Foundation
-#if os(macOS)
-import Clibgit2macos
-#else
+
 import Clibgit2
-#endif
 
 public let libGit2ErrorDomain = "org.libgit2.libgit2"
 

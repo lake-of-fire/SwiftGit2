@@ -6,11 +6,8 @@
 //  Copyright (c) 2015 GitHub, Inc. All rights reserved.
 //
 
-#if os(macOS)
-import Clibgit2macos
-#else
+
 import Clibgit2
-#endif
 
 /// A remote in a git repository.
 public struct Remote: Hashable {
