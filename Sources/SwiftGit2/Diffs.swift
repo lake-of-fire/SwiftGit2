@@ -6,7 +6,11 @@
 //  Copyright © 2017 GitHub, Inc. All rights reserved.
 //
 
+#if os(macOS)
+import Clibgit2macos
+#else
 import Clibgit2
+#endif
 
 public struct StatusEntry {
 	public var status: Diff.Status

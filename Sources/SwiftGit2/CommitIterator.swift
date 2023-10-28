@@ -4,7 +4,11 @@
 //
 
 import Foundation
+#if os(macOS)
+import Clibgit2macos
+#else
 import Clibgit2
+#endif
 
 public class CommitIterator: IteratorProtocol, Sequence {
 	public typealias Iterator = CommitIterator

@@ -6,7 +6,11 @@
 //  Copyright (c) 2015 GitHub, Inc. All rights reserved.
 //
 
+#if os(macOS)
+import Clibgit2macos
+#else
 import Clibgit2
+#endif
 
 /// A reference to a git object.
 public protocol ReferenceType {

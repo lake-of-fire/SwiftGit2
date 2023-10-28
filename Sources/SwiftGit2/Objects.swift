@@ -7,7 +7,11 @@
 //
 
 import Foundation
+#if os(macOS)
+import Clibgit2macos
+#else
 import Clibgit2
+#endif
 
 /// A git object.
 public protocol ObjectType {

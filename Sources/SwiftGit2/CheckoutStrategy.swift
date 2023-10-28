@@ -6,7 +6,11 @@
 //  Copyright (c) 2015 GitHub, Inc. All rights reserved.
 //
 
+#if os(macOS)
+import Clibgit2macos
+#else
 import Clibgit2
+#endif
 
 /// The flags defining how a checkout should be performed.
 /// More detail is available in the libgit2 documentation for `git_checkout_strategy_t`.

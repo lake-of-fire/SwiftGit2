@@ -6,7 +6,11 @@
 //  Copyright © 2016 GitHub, Inc. All rights reserved.
 //
 
+#if os(macOS)
+import Clibgit2macos
+#else
 import Clibgit2
+#endif
 
 private class Wrapper<T> {
 	let value: T

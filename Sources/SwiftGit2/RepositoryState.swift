@@ -5,7 +5,11 @@
 //  Created by Ken Chung on 12/08/2023.
 //
 
+#if os(macOS)
+import Clibgit2macos
+#else
 import Clibgit2
+#endif
 import Foundation
 
 public struct RepositoryState: OptionSet {

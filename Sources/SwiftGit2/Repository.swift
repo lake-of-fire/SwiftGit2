@@ -7,7 +7,11 @@
 //
 
 import Foundation
+#if os(macOS)
+import Clibgit2macos
+#else
 import Clibgit2
+#endif
 
 public typealias CheckoutProgressBlock = (String?, Int, Int) -> Void
 public typealias FetchProgressBlock = (Int, Int) -> Void
