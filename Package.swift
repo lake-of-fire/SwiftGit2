@@ -27,7 +27,7 @@ let package = Package(
         .package(url: "https://github.com/lake-of-fire/LibGit2-On-iOS-thebaselab.git", branch: "master"),
 //        .package(url: "https://github.com/krzyzanowskim/OpenSSL.git", branch: "main"),
 //        .package(url: "https://github.com/DimaRU/Libssh2Prebuild.git", branch: "master"),
-        .package(url: "https://github.com/mfcollins3/libssh2-apple.git", .upToNextMajor(from: "0.1.0")),
+        .package(url: "https://github.com/lake-of-fire/libssh2-apple.git", .upToNextMajor(from: "0.1.0")),
     ],
     targets: [
 //        .binaryTarget(
