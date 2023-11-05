@@ -1,4 +1,4 @@
-// swift-tools-version:5.8
+// swift-tools-version:5.9
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -79,7 +79,7 @@ let package = Package(
 //                .product(name: "CSSH", package: "Libssh2Prebuild"),
                 .product(name: "SSH2", package: "libssh2-apple", condition: .when(platforms: [.macOS])),
 //                .product(name: "static-libgit2", package: "static-libgit2"),
-            ]//,
+            ], swiftSettings: [.interoperabilityMode(.C)]//,
 //            linkerSettings: [
 //                .linkedLibrary("iconv"),
 //                .linkedLibrary("z"),
