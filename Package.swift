@@ -16,21 +16,21 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         //.package(url: "https://github.com/Quick/Quick.git", .upToNextMajor(from: "4.0.0")),
         //.package(url: "https://github.com/Quick/Nimble.git", .upToNextMajor(from: "9.2.1")),
-////        .package(url: "https://github.com/mfcollins3/libssh2-apple.git", branch: "main"),
-//        .package(
-//              url: "https://github.com/mfcollins3/libssh2-apple.git",
-//              .upToNextMajor(from: "0.1.0")
-//          ),
-//        .package(url: "https://github.com/lake-of-fire/libgit2.git", branch: "main"),
+        ////        .package(url: "https://github.com/mfcollins3/libssh2-apple.git", branch: "main"),
+        //        .package(
+        //              url: "https://github.com/mfcollins3/libssh2-apple.git",
+        //              .upToNextMajor(from: "0.1.0")
+        //          ),
+        //        .package(url: "https://github.com/lake-of-fire/libgit2.git", branch: "main"),
         .package(url: "https://github.com/lake-of-fire/libgit2-apple.git", branch: "main"),
-//        .package(url: "https://github.com/lake-of-fire/static-libgit2.git", branch: "main"),
+        //        .package(url: "https://github.com/lake-of-fire/static-libgit2.git", branch: "main"),
         .package(url: "https://github.com/lake-of-fire/LibGit2-On-iOS-thebaselab.git", branch: "master"),
-//        .package(url: "https://github.com/krzyzanowskim/OpenSSL.git", branch: "main"),
-//        .package(url: "https://github.com/DimaRU/Libssh2Prebuild.git", branch: "master"),
-        .package(url: "https://github.com/lake-of-fire/libssh2-apple.git", .upToNextMajor(from: "0.1.0")),
+        //        .package(url: "https://github.com/krzyzanowskim/OpenSSL.git", branch: "main"),
+        //        .package(url: "https://github.com/DimaRU/Libssh2Prebuild.git", branch: "master"),
+            .package(url: "https://github.com/lake-of-fire/libssh2-apple.git", branch: "main"),
     ],
     targets: [
-//        .binaryTarget(
+        //        .binaryTarget(
 //                name: "libgit2",
 //                url: "https://github.com/holzschu/libgit2/releases/download/ios_1.0/lg2.xcframework.zip",
 //                checksum: "7d205a771be8d120a80d2f7281135dfffd21a3713c86eb4f1957638f6b4b365e"
